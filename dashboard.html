@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PureNest | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Dashboard Navigation -->
+
+    <header class="dashboard-nav">
+
+        <div class="container dashboard-nav-inner">
+
+            <div class="logo">
+                Pure<span>Nest</span>
+            </div>
+
+            <div class="dashboard-user">
+
+                <span>
+                    Owner Dashboard
+                </span>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+                    Log Out
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="dashboard">
+
+
+        <div class="container">
+
+
+            <!-- Header -->
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        BUSINESS DASHBOARD
+                    </p>
+
+                    <h1>
+                        Good to see you.
+                    </h1>
+
+                    <p>
+                        Manage your customer requests
+                        and messages.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Statistics -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <span>
+                        New Quotes
+                    </span>
+
+                    <strong id="newQuotes">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Contacted
+                    </span>
+
+                    <strong id="contactedQuotes">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Booked
+                    </span>
+
+                    <strong id="bookedQuotes">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="completedQuotes">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Quote Requests -->
+
+            <section class="dashboard-section">
+
+<div class="section-header">
+
+    <div>
+
+        <p class="eyebrow">
+            LEADS
+        </p>
+
+        <h2>
+            Quote Requests
+        </h2>
+
+    </div>
+
+    <div class="dashboard-filters">
+
+        <input
+            type="search"
+            id="quoteSearch"
+            placeholder="Search customers..."
+        >
+
+        <select id="quoteStatusFilter">
+
+            <option value="all">
+                All Statuses
+            </option>
+
+            <option value="new">
+                New
+            </option>
+
+            <option value="contacted">
+                Contacted
+            </option>
+
+            <option value="booked">
+                Booked
+            </option>
+
+            <option value="completed">
+                Completed
+            </option>
+
+            <option value="cancelled">
+                Cancelled
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+                <div
+                    id="quoteRequests"
+                    class="requests-list"
+                >
+
+                    <div class="empty-state">
+
+                        <p>
+                            No quote requests yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Contact Messages -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            INBOX
+                        </p>
+
+                        <h2>
+                            Contact Messages
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="contactMessages"
+                    class="requests-list"
+                >
+
+                    <div class="empty-state">
+
+                        <p>
+                            No contact messages yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
